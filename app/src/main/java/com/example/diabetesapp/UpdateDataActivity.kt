@@ -82,7 +82,6 @@ class UpdateDataActivity : AppCompatActivity() {
         emailInput = findViewById(R.id.emailInput)
         phoneInput = findViewById(R.id.phoneInput)
         addressInput = findViewById(R.id.addressInput)
-        interestsInput = findViewById(R.id.interestsInput)
         submitButton = findViewById(R.id.submitButton)
         cancelButton = findViewById(R.id.cancelButton)
         profileImageView = findViewById(R.id.profileImageView)
@@ -109,10 +108,10 @@ class UpdateDataActivity : AppCompatActivity() {
         if (user.profilePictureUrl.isNotEmpty()) {
             Glide.with(this)
                 .load(Uri.parse(user.profilePictureUrl))
-                .placeholder(R.drawable.ball) // Placeholder while the image loads
+                .placeholder(R.drawable.profile) // Placeholder while the image loads
                 .into(profileImageView)
         } else {
-            profileImageView.setImageResource(R.drawable.ball) // Default image if no profile picture is set
+            profileImageView.setImageResource(R.drawable.profile) // Default image if no profile picture is set
         }
     }
 
