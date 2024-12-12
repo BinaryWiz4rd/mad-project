@@ -91,7 +91,6 @@ class MainActivity : AppCompatActivity() {
         phoneInput = findViewById(R.id.phoneInput)
         dobText = findViewById(R.id.dobText)
         addressInput = findViewById(R.id.addressInput)
-        interestsInput = findViewById(R.id.interestsInput)
         updateButton = findViewById(R.id.updateDataButton)
         submitButton = findViewById(R.id.submitButton)
         selectImageButton = findViewById(R.id.selectImageButton)
@@ -206,10 +205,10 @@ class MainActivity : AppCompatActivity() {
             if (user.profilePictureUrl.isNotEmpty()) {
                 Glide.with(this)
                     .load(Uri.parse(user.profilePictureUrl))
-                    .placeholder(R.drawable.ball) // Placeholder image
+                    .placeholder(R.drawable.profile) // Placeholder image
                     .into(profileImageView)
             } else {
-                profileImageView.setImageResource(R.drawable.ball) // Default image
+                profileImageView.setImageResource(R.drawable.profile) // Default image
             }
         } catch (e: Exception) {
             Toast.makeText(this, "Error displaying user data.", Toast.LENGTH_SHORT).show()
