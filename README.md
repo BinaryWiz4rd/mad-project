@@ -1,4 +1,6 @@
-KotlinProject --> 2 wersja
+KotlinProject --> stara wersja
+
+NOWA WERSJA
 
 mad-project: git
 
